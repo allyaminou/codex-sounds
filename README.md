@@ -1,4 +1,5 @@
 # CodeX Sound Player Script
+![codex-sounds](https://github.com/5M-CodeX/codex-sounds/assets/112611821/fe3c6a18-4de6-45d6-8477-2b85ddac07a0)
 
 This is a Lua script for CitizenFX (FiveM) that allows you to play sounds and send messages to clients when specific events are triggered. It includes a delay to ensure the player has fully loaded before handling events.
 
