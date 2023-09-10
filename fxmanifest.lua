@@ -17,5 +17,6 @@ files {
     'client/html/sounds/cellDoor.ogg',
     'client/html/sounds/shiftreverse.ogg',
     'client/html/sounds/shiftdrive.ogg',
-	'client/html/sounds/stopped.ogg'
+    'client/html/sounds/stopped.ogg',
+    'client/html/sounds/panic.ogg',
 }
