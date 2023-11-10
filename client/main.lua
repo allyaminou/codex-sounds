@@ -15,3 +15,21 @@ AddEventHandler('codex-sound:PlayOnOne', function(soundFile, soundVolume)
         })
     end
 end)
+
+
+
+RegisterNetEvent('codex-sound:client:PlayWithinDistance')
+AddEventHandler('codex-sound:client:PlayWithinDistance', function(otherPlayerCoords, maxDistance, soundFile, soundVolume)
+	if hasPlayerLoaded then
+		local myCoords = GetEntityCoords(PlayerPedId())
+		local distance = #(myCoords - otherPlayerCoords)
+
+		if distance < maxDistance then
+			SendNUIMessage({
+				transactionType = 'playSound',
+				transactionFile  = soundFile,
+				transactionVolume = soundVolume or standardVolumeOutput
+			})
+		end
+	end
+end)
