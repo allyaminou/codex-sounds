@@ -33,3 +33,14 @@ AddEventHandler('codex-sound:client:PlayWithinDistance', function(otherPlayerCoo
 		end
 	end
 end)
+
+RegisterNetEvent('InteractSound_CL:PlayOnAll')
+AddEventHandler('InteractSound_CL:PlayOnAll', function(soundFile, soundVolume)
+    if hasPlayerLoaded then
+        SendNUIMessage({
+            transactionType = 'playSound',
+            transactionFile = soundFile,
+            transactionVolume = soundVolume or standardVolumeOutput
+        })
+    end
+end)
