@@ -57,3 +57,8 @@ AddEventHandler('SBSound_SV:PlayWithinDistance', function(maxDistance, soundFile
         print(('[interact-sound] [^3WARNING^7] %s attempted to trigger SBSound_SV:PlayWithinDistance over the distance limit ' .. DistanceLimit):format(GetPlayerName(src)))
     end
 end)
+
+RegisterNetEvent('codex-sound:server:PlayOnAll')
+AddEventHandler('codex-sound:server:PlayOnAll', function(soundFile, soundVolume)
+    TriggerClientEvent('codex-sound:client:PlayOnAll', -1, soundFile, soundVolume)
+end)
